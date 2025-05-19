@@ -2,6 +2,7 @@ import React from 'react'
 // import { connect } from 'react-redux'
 import {BrowserRouter ,Route,Routes } from 'react-router-dom'
 import UserLayout from './components/layout/UserLayout';
+import Home from './pages/Home'
 
 const App = () => {
   return (
@@ -11,6 +12,8 @@ const App = () => {
     <Routes>
       {/* user layout */}
       <Route path='/' element={<UserLayout/>} />
+
+      <Route index element={<Home/>} />
 
 
       {/* admin layout */}
