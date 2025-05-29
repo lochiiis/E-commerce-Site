@@ -113,7 +113,7 @@ const NewArrivals = () => {
 
 
     return (
-        <section className="bg-pink-100/50 py-20 mb-15">
+        <section className="bg-gray-100 py-20 mb-15">
             <div className="container mx-auto text-center mb-10 relative">
                 <h2 className="text-3xl font-bold mb-4">Explore New Arrivals</h2>
                 <p className="text-lg text-gray-600 mb-8">Discover the latest styles freshly added to keep your wordrobe on the cutting edge of fashion </p>
@@ -125,8 +125,8 @@ const NewArrivals = () => {
                         disabled={!canScrollLeft}
                         className={`px-2 rounded border 
                                 ${canScrollLeft
-                                ? "bg-pink-300 text-pink-100"
-                                : "bg-gray-200 text-pink-400 cursor-not-allowed"
+                                ? "bg-gray-950 text-pink-100"
+                                : "bg-gray-300 text-gray-800 cursor-not-allowed"
                             }`}
                     >
                         <ChevronLeft className="w-5 h-5" />
@@ -136,8 +136,8 @@ const NewArrivals = () => {
                         disabled={!canScrollRight}
                         className={`px-2 rounded border 
                                 ${canScrollRight
-                                ? "bg-pink-300 text-pink-100"
-                                : "bg-gray-200 text-pink-400 cursor-not-allowed"
+                                ? "bg-gray-950 text-pink-100"
+                                : "bg-gray-300 text-gray-800 cursor-not-allowed"
                             }`}
 
                     >
@@ -155,7 +155,7 @@ const NewArrivals = () => {
                     <div key={product._id} className="min-w-[100%] sm:min-w-[50%] lg:min-w-[20%] relative">
                         <img
                             src={product.images[0]?.url}
-                            className="w-full h-[300px] object-cover rounded-lg"
+                            className="w-full h-68 object-cover rounded-lg"
                             alt={product.images[0]?.altText || product.name} />
 
                         <div className="absolute bottom-0 left-0 right-0 backdrop-blur-md text-white p-4 rounded-b-lg">

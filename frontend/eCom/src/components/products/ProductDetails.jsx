@@ -29,7 +29,7 @@ const similarProducts = [
         name: "Casual Shirt",
         price: 50,
         images: [
-            {url: "https://picsum.photos/500/500?random=3"}
+            { url: "https://picsum.photos/500/500?random=3" }
         ],
     },
     {
@@ -37,7 +37,7 @@ const similarProducts = [
         name: "Denim Jeans",
         price: 80,
         images: [
-            {url: "https://picsum.photos/500/500?random=4"}
+            { url: "https://picsum.photos/500/500?random=4" }
         ],
     },
     {
@@ -45,7 +45,7 @@ const similarProducts = [
         name: "Sneakers",
         price: 90,
         images: [
-            {url: "https://picsum.photos/500/500?random=5"}
+            { url: "https://picsum.photos/500/500?random=5" }
         ],
     },
     {
@@ -53,7 +53,7 @@ const similarProducts = [
         name: "Leather Boots",
         price: 110,
         images: [
-            {url: "https://picsum.photos/500/500?random=6"}
+            { url: "https://picsum.photos/500/500?random=6" }
         ],
     },
 ]
