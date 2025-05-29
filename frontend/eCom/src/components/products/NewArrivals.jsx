@@ -113,20 +113,20 @@ const NewArrivals = () => {
 
 
     return (
-        <section className="bg-gray-100 py-10">
+        <section className="bg-pink-100/50 py-20 mb-15">
             <div className="container mx-auto text-center mb-10 relative">
                 <h2 className="text-3xl font-bold mb-4">Explore New Arrivals</h2>
                 <p className="text-lg text-gray-600 mb-8">Discover the latest styles freshly added to keep your wordrobe on the cutting edge of fashion </p>
 
                 {/* scroll button */}
-                <div className="absolute right-0 bottom-[-30px] flex space-x-2">
+                <div className="absolute right-0 bottom-[-30px] flex space-x-2 ">
                     <button
                         onClick={() => scroll("left")}
                         disabled={!canScrollLeft}
-                        className={`p-2 rounded border 
+                        className={`px-2 rounded border 
                                 ${canScrollLeft
-                                ? "bg-white text-black"
-                                : "bg-gray-200 text-gray-400 cursor-not-allowed"
+                                ? "bg-pink-300 text-pink-100"
+                                : "bg-gray-200 text-pink-400 cursor-not-allowed"
                             }`}
                     >
                         <ChevronLeft className="w-5 h-5" />
@@ -134,10 +134,10 @@ const NewArrivals = () => {
                     <button
                         onClick={() => scroll("right")}
                         disabled={!canScrollRight}
-                        className={`p-2 rounded border 
+                        className={`px-2 rounded border 
                                 ${canScrollRight
-                                ? "bg-white text-black"
-                                : "bg-gray-200 text-gray-400 cursor-not-allowed"
+                                ? "bg-pink-300 text-pink-100"
+                                : "bg-gray-200 text-pink-400 cursor-not-allowed"
                             }`}
 
                     >
@@ -149,7 +149,7 @@ const NewArrivals = () => {
             {/* srollable content */}
             <div
                 ref={scrollRef}
-                className="container mx-auto overflow-x-scroll flex space-x-6 relative"
+                className="container mx-auto overflow-x-scroll flex space-x-6 relative scroll-hidden"
             >
                 {NewArrivals.map((product) => (
                     <div key={product._id} className="min-w-[100%] sm:min-w-[50%] lg:min-w-[20%] relative">

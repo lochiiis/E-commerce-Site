@@ -5,3 +5,12 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
+/* Hide scrollbar but allow scrolling */
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-hidden {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
