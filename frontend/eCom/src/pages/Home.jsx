@@ -74,7 +74,7 @@ const placeholderProducts = [
 
 const Home = () => {
   return (
-    <div className="h-2000">
+    <div>
       <HeroSection />
       <GenderCollectionSection />
       <NewArrivals />
