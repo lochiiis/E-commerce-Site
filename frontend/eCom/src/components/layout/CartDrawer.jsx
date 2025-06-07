@@ -1,8 +1,15 @@
 import { X } from 'lucide-react';
 import CartContents from '../cart/CartContents';
+import { useNavigate } from 'react-router-dom';
 
 
 const CartDrawer = ({ drawerOpen, toggleCartDrawer }) => {
+
+    const navigate = useNavigate();
+    const handleCheckout = () => {
+        toggleCartDrawer(); // Close the cart drawer
+        navigate('/checkout');
+    }
 
 
     return (
@@ -23,7 +30,9 @@ const CartDrawer = ({ drawerOpen, toggleCartDrawer }) => {
             </div>
             {/* checkout */}
             <div className='p-4 bg-white sticky bottom-0'>
-                <button className='w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition'>
+                <button
+                    onClick={handleCheckout}
+                    className='w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition'>
                     Checkout
                 </button>
 
