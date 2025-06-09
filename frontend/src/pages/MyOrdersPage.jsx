@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const MyOrdersPage = () => {
     const [orders, setOrders] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -50,6 +52,10 @@ const MyOrdersPage = () => {
 
     }, []);
 
+    const handleRowClick = (orderId) => {
+        navigate(`/order/${orderId}`);
+    }
+
     return (
 
         <div className="max-w-7xl mx-auto p-4 sm:p-6">
@@ -71,7 +77,11 @@ const MyOrdersPage = () => {
                     <tbody>
                         {orders.length > 0 ? (
                             orders.map((order) => (
-                                <tr key={order._id} className="border-b hover:border-r-gray-50 cursor-pointer">
+                                <tr
+                                    key={order._id}
+                                    onClick={() => handleRowClick(order._id)}
+                                    className="border-b hover:border-r-gray-50 cursor-pointer"
+                                >
                                     <td className="py-2 px-2 sm:py-4 sm:px-4">
                                         <img
                                             src={order.orderItems[0].image} alt={order.orderItems[0].name}
@@ -97,8 +107,8 @@ const MyOrdersPage = () => {
                                     </td>
                                     <td className="py-2 px-2 sm:py-4 sm:px-4">
                                         <span className={`${order.isPaid
-                                                ? "bg-green-100 text-green-700"
-                                                : "bg-red-100 text-red-700"
+                                            ? "bg-green-100 text-green-700"
+                                            : "bg-red-100 text-red-700"
                                             }
                                             px-2 py-1 rounded-lg text-xs sm:text-sm font-medium`}>
                                             {order.isPaid ? "Paid" : "Pending"}
