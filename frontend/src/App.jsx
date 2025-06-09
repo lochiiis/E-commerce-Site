@@ -13,6 +13,8 @@ import Checkout from './components/cart/Checkout';
 import OrderConfirmation from './pages/OrderConfirmation';
 import OrderDetails from './pages/OrderDetails';
 import MyOrdersPage from './pages/MyOrdersPage';
+import AdminLayout from './components/admin/AdminLayout';
+import AdminHomePage from './pages/AdminHomePage';
 
 const App = () => {
   return (
@@ -34,12 +36,17 @@ const App = () => {
           <Route path="my-orders" element={<MyOrdersPage />} />
           <Route path="order/:id" element={<OrderDetails />} />
 
-
-
-
         </Route>
 
+
         {/* admin layout */}
+        <Route path="/admin" element={<AdminLayout />} >
+        <Route index element={<AdminHomePage />} />
+
+        
+        
+        
+        </Route>
 
 
       </Routes>
