@@ -96,10 +96,6 @@ const productSchema = new mongoose.Schema({
         width:Number,
         height:Number,
     },
-    weight: {
-        type: Number,
-        default: 0,
-    },
 }, 
 {timestamps: true,}
 );
