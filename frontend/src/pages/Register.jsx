@@ -2,16 +2,19 @@
 import { Link } from 'react-router-dom';
 import registerImg from '../assets/register.jpg';
 import { useState } from 'react';
+import { registerUser } from '../redux/slices/authSlice';
+import { useDispatch } from 'react-redux';
 
 const Register = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
+    const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle registration logic here
-        console.log('Registration details:', { name, email, password });
+        dispatch(registerUser({ name, email, password }))
     }
 
     return (
